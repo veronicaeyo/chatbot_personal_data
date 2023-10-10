@@ -1,0 +1,8 @@
+.env
+__pycache__
+.vscode
+youtube/*
+docs/chroma/
+docs/notion_db/
+```
+docs/chromahf/

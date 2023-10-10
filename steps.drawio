@@ -1,0 +1,77 @@
+<mxfile host="65bd71144e">
+    <diagram id="l6sd9zgB9RCdRj96Qipt" name="Page-1">
+        <mxGraphModel dx="929" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Load Document: &lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;ol&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;PDF,&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Notion,&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;youtube,&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;url&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="140" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Split Document:&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Recursive text splitter,&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;character text split,&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;context aware splitting,&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;token splitting&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="130" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;b&gt;storage:&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;embeddings and&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;vector stores&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b&gt;Retrieval:&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;Similarity search,&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#ffffff&quot;&gt;Maximum&lt;/font&gt;&lt;span style=&quot;color: rgb(86, 156, 214);&quot;&gt; &lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;marginal relevance(adds diversity to the response),&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;working with metadata(adding filter manually),&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;self query(it uses an llm to split query into question and filter),&lt;/li&gt;&lt;li&gt;compression(use LLM to take only the relevant bits from chunk result)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="120" width="260" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="250" as="sourcePoint"/>
+                        <mxPoint x="570" y="200" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.021;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="280" as="sourcePoint"/>
+                        <mxPoint x="450" y="230" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="150" y="210" as="sourcePoint"/>
+                        <mxPoint x="230" y="210" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="170" y="209.5"/>
+                            <mxPoint x="200" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;fontColor=#FFFFFF;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="400" as="sourcePoint"/>
+                        <mxPoint x="440" y="370" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;fontColor=#FFFFFF;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="220" y="420" as="sourcePoint"/>
+                        <mxPoint x="470" y="400" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="340" y="410"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="&lt;div style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;&quot;&gt;&lt;b style=&quot;border-color: rgb(0, 0, 0); background-color: initial;&quot;&gt;Question and Answering:&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;&quot;&gt;&lt;ol style=&quot;border-color: rgb(0, 0, 0);&quot;&gt;&lt;li style=&quot;padding: 3px 0px; border-color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); background-color: initial;&quot;&gt;Retrieval QA chain types,&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px; border-color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); background-color: initial;&quot;&gt;Using Prompt template,&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px; border-color: rgb(0, 0, 0);&quot;&gt;Retrieval QA Chain types, Map reduce, refine and Map rerank&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px; border-color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); background-color: initial;&quot;&gt;token splitting&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="440" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;fontColor=#FFFFFF;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="680" y="380" as="sourcePoint"/>
+                        <mxPoint x="680" y="450" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="680" y="380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bdiv%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20color%3A%20rgb(240%2C%20240%2C%20240)%3B%20font-family%3A%20Helvetica%3B%20font-size%3A%2012px%3B%20font-style%3A%20normal%3B%20font-variant-ligatures%3A%20normal%3B%20font-variant-caps%3A%20normal%3B%20font-weight%3A%20400%3B%20letter-spacing%3A%20normal%3B%20orphans%3A%202%3B%20text-indent%3A%200px%3B%20text-transform%3A%20none%3B%20widows%3A%202%3B%20word-spacing%3A%200px%3B%20-webkit-text-stroke-width%3A%200px%3B%20background-color%3A%20rgb(42%2C%2037%2C%2047)%3B%20text-decoration-thickness%3A%20initial%3B%20text-decoration-style%3A%20initial%3B%20text-decoration-color%3A%20initial%3B%20text-align%3A%20center%3B%26quot%3B%26gt%3B%26lt%3Bb%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20background-color%3A%20initial%3B%26quot%3B%26gt%3BQuestion%20and%20Answering%3A%26lt%3B%2Fb%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20color%3A%20rgb(240%2C%20240%2C%20240)%3B%20font-family%3A%20Helvetica%3B%20font-size%3A%2012px%3B%20font-style%3A%20normal%3B%20font-variant-ligatures%3A%20normal%3B%20font-variant-caps%3A%20normal%3B%20font-weight%3A%20400%3B%20letter-spacing%3A%20normal%3B%20orphans%3A%202%3B%20text-indent%3A%200px%3B%20text-transform%3A%20none%3B%20widows%3A%202%3B%20word-spacing%3A%200px%3B%20-webkit-text-stroke-width%3A%200px%3B%20background-color%3A%20rgb(42%2C%2037%2C%2047)%3B%20text-decoration-thickness%3A%20initial%3B%20text-decoration-style%3A%20initial%3B%20text-decoration-color%3A%20initial%3B%20text-align%3A%20center%3B%26quot%3B%26gt%3B%26lt%3Bol%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%26quot%3B%26gt%3B%26lt%3Bli%20style%3D%26quot%3Bpadding%3A%203px%200px%3B%20border-color%3A%20rgb(0%2C%200%2C%200)%3B%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20background-color%3A%20initial%3B%26quot%3B%26gt%3BRetrieval%20QA%20chain%20types%2C%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3Bli%20style%3D%26quot%3Bpadding%3A%203px%200px%3B%20border-color%3A%20rgb(0%2C%200%2C%200)%3B%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20background-color%3A%20initial%3B%26quot%3B%26gt%3BUsing%20Prompt%20template%2C%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3Bli%20style%3D%26quot%3Bpadding%3A%203px%200px%3B%20border-color%3A%20rgb(0%2C%200%2C%200)%3B%26quot%3B%26gt%3BRetrieval%20QA%20Chain%20types%2C%20Map%20reduce%2C%20refine%20and%20Map%20rerank%26lt%3B%2Fli%26gt%3B%26lt%3Bli%20style%3D%26quot%3Bpadding%3A%203px%200px%3B%20border-color%3A%20rgb(0%2C%200%2C%200)%3B%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bborder-color%3A%20rgb(0%2C%200%2C%200)%3B%20background-color%3A%20initial%3B%26quot%3B%26gt%3Btoken%20splitting%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fli%26gt%3B%26lt%3B%2Fol%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22text%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfontColor%3D%23FFFFFF%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22590%22%20y%3D%22440%22%20width%3D%22200%22%20height%3D%22140%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="540" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
