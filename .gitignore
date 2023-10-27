@@ -6,3 +6,6 @@ docs/chroma/
 docs/notion_db/
 ```
 docs/chromahf/
+scripts/__pycache__/
+scripts/flagged/
+scripts/chroma/
